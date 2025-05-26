@@ -1,0 +1,70 @@
+.contact-form {
+    max-width: $desktop;
+    margin: auto;
+    padding: $size-4;
+    background-color: var(--neutral-800);
+    border-radius: $size-3;
+    margin-top: -$size-5;
+    display: flex;
+    flex-direction: column;
+    gap: $size-4;
+    text-align: center;
+    overflow: hidden;
+
+    .rich-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p {
+            max-width: 800px;
+        }
+    }
+
+    form {
+        display: flex;
+        gap: $size-3;
+        flex-direction: column;
+        position: relative;
+        z-index: 10;
+        
+        button {
+            z-index: 10;
+        }
+
+        label {
+            position: relative;
+            z-index: 11;
+        }
+
+        input, textarea {
+            z-index: 10;
+            position: relative;
+        }
+
+        &::after {
+            content: "";
+            width: 500px;
+            height: 500px;
+            background-color: var(--primary-500);
+            display: block;
+            position: absolute;
+            top: -25%;
+            left: 50%;
+            transform: translateX(-50%);
+            filter: blur(150px);
+            opacity: 0.1;
+            z-index: 1;
+
+            @media (max-width: $mobile) { 
+                display: none;
+            }
+        }
+
+        .input-group {
+            display: flex;
+            gap: $size-3;
+            flex-direction: row;
+        }
+    }
+}

@@ -1,0 +1,78 @@
+.hero-banner {
+    padding: $size-5 0;
+
+    &.size-xs {
+        height: 30vh;
+    }
+    
+    &.size-md {
+        height: 50vh;
+    }
+
+    &.size-xl {
+        height: 80vh;
+    }
+
+    &.size-full {
+        height: 100vh;
+    }
+
+    &.size-auto{
+        height: auto;
+    }
+
+    @media (max-width: $mobile) { 
+        height: 100% !important;
+    }
+
+    .content-wrapper {
+        display: flex;
+        gap: $size-3;
+        height: 100%;
+        align-items: center;
+        padding: $size-3;
+        justify-content: center;
+
+        .hero-content {
+            text-align: center;
+            position: relative;
+
+            .rich-text {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: $size-3;
+                z-index: 10;
+                position: relative;
+
+                p {
+                    max-width: 800px;
+                }
+            }
+
+            &::after {
+                content: "";
+                width: 500px;
+                height: 500px;
+                background-color: var(--primary-500);
+                display: block;
+                position: absolute;
+                top: 0px;
+                left: 50%;
+                transform: translateX(-50%);
+                filter: blur(100px);
+                opacity: 0.1;
+                z-index: 1;
+
+                @media (max-width: $mobile) { 
+                    display: none;
+                }
+            }
+        }
+
+        @media (max-width: $mobile) { 
+            flex-direction: column-reverse;
+            justify-content: center;
+        }
+    }
+}

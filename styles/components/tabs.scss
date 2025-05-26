@@ -1,0 +1,9 @@
+.tabs {
+    display: flex;
+    flex-direction: column;
+    gap: $size-2;
+    .tab-titles {
+        display: flex;
+        gap: $size-2;
+    }
+}

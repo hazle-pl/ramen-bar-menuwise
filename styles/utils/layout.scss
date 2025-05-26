@@ -1,0 +1,19 @@
+.content-wrapper {
+    max-width: $desktop;
+    margin: auto;
+    padding: 0 $size-3;
+}
+
+.box {
+    border-radius: $size-3;
+
+    &.flex {
+        display: flex;
+        gap: $size-2;
+        flex-wrap: wrap;
+    }
+
+    &.center {
+        justify-content: center;
+    }
+}

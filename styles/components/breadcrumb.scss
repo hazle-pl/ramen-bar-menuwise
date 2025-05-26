@@ -1,0 +1,30 @@
+.breadcrumb {
+    margin-bottom: $size-3;
+    ul {
+        display: flex;
+        margin: 0px;
+        padding: 0px;
+        gap: $size-1;
+        list-style: none;
+
+        li {
+            display: flex;
+            gap: $size-1;
+            color: var(--neutral-300);
+            a {
+                text-transform: capitalize;
+                text-decoration: none;
+                color: var(--neutral-300);
+            }
+
+            &:nth-last-child(1) {
+                color: var(--primary-500);
+
+                a {
+                    color: var(--primary-500);
+                }
+            }
+        }
+    }
+
+}

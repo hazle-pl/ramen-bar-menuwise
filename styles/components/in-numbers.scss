@@ -1,0 +1,15 @@
+.in-numbers {
+    .grid {
+        .rich-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            p {
+                &.big {
+                    font-size: 4rem;
+                }
+            }
+        }
+    }
+}
